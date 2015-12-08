@@ -6,6 +6,7 @@ gem 'rails', '4.1.4'
 
 # Fix the conflict with the system 'rake':
 gem 'rake', '~> 0.9.6'
+gem 'rack', '1.5.2'
 
 # Support for databases and environment.
 # Use 'sqlite3' for testing and development and mysql and postgresql
@@ -17,14 +18,9 @@ gem 'rake', '~> 0.9.6'
 # $ rhc env set BUNDLE_WITHOUT="development test postgresql"
 #
 group :development, :test do
-  gem 'sqlite3'
-  gem 'minitest'
-  gem 'thor'
-end
-
-# Add support for the MySQL
-group :production, :mysql do
-  gem 'mysql2'
+#  gem 'pg'
+#  gem 'minitest'
+#  gem 'thor'
 end
 
 group :production, :postgresql do
@@ -41,6 +37,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
+# Use Bootstrap
+gem 'bootstrap-sass'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -54,6 +52,9 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
+# Use HAML
+gem 'haml'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -66,3 +67,5 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+# Use Mechanizer for the scripts
+#gem 'mechanize', '~> 2.7.3'
